@@ -2,6 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static CharacterSelection.ProfilCreationMenu.CharacterParts;
 
 public class CharacterSelection : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class CharacterSelection : MonoBehaviour
         public TextMeshProUGUI playerName;
         public Button Next;
         public CharacterParts characterSelection;
+        public HobbysSelection hobbysSelection;
 
         [Serializable]
         public class CharacterParts
@@ -27,7 +29,7 @@ public class CharacterSelection : MonoBehaviour
             [Serializable]
             public class Part
             {
-                [HideInInspector] public int index = 0;
+                public int index = 0;
                 public CharacterAssets assets;
                 public Button next;
                 public Button before;
@@ -36,13 +38,13 @@ public class CharacterSelection : MonoBehaviour
         }
 
         [Serializable]
-        public class HobbysSelction
+        public class HobbysSelection
         {
             public GameObject menu;
             public HobbysAssets hobbysAssets;
             public Button firstHobbys;
             public Button secondHobbys;
-            public Button thirdHobbys;
+            public Button redFlag;
         }
     }
 
@@ -57,25 +59,26 @@ public class CharacterSelection : MonoBehaviour
     /// </summary>
     void Bind()
     {
-        ProfilCreationMenu.CharacterParts.Part part = profilCreationMenu.characterSelection.hair;
-        profilCreationMenu.characterSelection.hair.next.onClick.AddListener(delegate { SelectAssets(part); });
-        profilCreationMenu.characterSelection.hair.before.onClick.AddListener(delegate { SelectAssets(part, false); });
+        // Character Creation
+        profilCreationMenu.characterSelection.hair.next.onClick.AddListener(delegate { SelectAssets(profilCreationMenu.characterSelection.hair); });
+        profilCreationMenu.characterSelection.hair.before.onClick.AddListener(delegate { SelectAssets(profilCreationMenu.characterSelection.hair, false); });
 
-        part = profilCreationMenu.characterSelection.eyes;
-        profilCreationMenu.characterSelection.eyes.next.onClick.AddListener(delegate { SelectAssets(part); });
-        profilCreationMenu.characterSelection.eyes.before.onClick.AddListener(delegate { SelectAssets(part, false); });
+        profilCreationMenu.characterSelection.eyes.next.onClick.AddListener(delegate { SelectAssets(profilCreationMenu.characterSelection.eyes); });
+        profilCreationMenu.characterSelection.eyes.before.onClick.AddListener(delegate { SelectAssets(profilCreationMenu.characterSelection.eyes, false); });
 
-        part = profilCreationMenu.characterSelection.nose;
-        profilCreationMenu.characterSelection.nose.next.onClick.AddListener(delegate { SelectAssets(part); });
-        profilCreationMenu.characterSelection.nose.before.onClick.AddListener(delegate { SelectAssets(part, false); });
+        profilCreationMenu.characterSelection.nose.next.onClick.AddListener(delegate { SelectAssets(profilCreationMenu.characterSelection.nose); });
+        profilCreationMenu.characterSelection.nose.before.onClick.AddListener(delegate { SelectAssets(profilCreationMenu.characterSelection.nose, false); });
 
-        part = profilCreationMenu.characterSelection.mouth;
-        profilCreationMenu.characterSelection.mouth.next.onClick.AddListener(delegate { SelectAssets(part); });
-        profilCreationMenu.characterSelection.mouth.before.onClick.AddListener(delegate { SelectAssets(part, false); });
+        profilCreationMenu.characterSelection.mouth.next.onClick.AddListener(delegate { SelectAssets(profilCreationMenu.characterSelection.mouth); });
+        profilCreationMenu.characterSelection.mouth.before.onClick.AddListener(delegate { SelectAssets(profilCreationMenu.characterSelection.mouth, false); });
 
-        part = profilCreationMenu.characterSelection.clothe;
-        profilCreationMenu.characterSelection.clothe.next.onClick.AddListener(delegate { SelectAssets(part); });
-        profilCreationMenu.characterSelection.clothe.before.onClick.AddListener(delegate { SelectAssets(part, false); });
+        profilCreationMenu.characterSelection.clothe.next.onClick.AddListener(delegate { SelectAssets(profilCreationMenu.characterSelection.clothe); });
+        profilCreationMenu.characterSelection.clothe.before.onClick.AddListener(delegate { SelectAssets(profilCreationMenu.characterSelection.clothe, false); });
+
+        // Hobby Selection
+        ProfilCreationMenu.HobbysSelection hob = profilCreationMenu.hobbysSelection;
+        //hob
+
     }
 
     void SelectAssets(ProfilCreationMenu.CharacterParts.Part part, bool isNext = true)
@@ -85,4 +88,5 @@ public class CharacterSelection : MonoBehaviour
         part.index = part.index < 0 ? part.assets.sprites.Length - 1 : part.index;
         part.image.sprite = part.assets.sprites[part.index];
     }
+
 }

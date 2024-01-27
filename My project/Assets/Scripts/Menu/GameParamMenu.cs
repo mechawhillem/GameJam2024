@@ -24,4 +24,9 @@ public class GameParamMenu : MonoBehaviour
             public TextMeshProUGUI nmbOfRound;
         }
     }
+
+    public void Bind() 
+    {
+        
+    }
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Hairs
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 881a4e9264c170747ba451f6083635ae, type: 3}
   - {fileID: 21300000, guid: 10abda576f6954d01b17ec71b23206a5, type: 3}
   - {fileID: 21300000, guid: a514a7b8e661e4d2d9906ddb3cb9c676, type: 3}
   - {fileID: 21300000, guid: 21a8e98924733490b8787025f2cb293a, type: 3}
@@ -21,4 +21,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2e586febc6f7442e98b3d021f8c784ef, type: 3}
   - {fileID: 21300000, guid: 85fda530d1ab847d5a47dd6d46b39064, type: 3}
   - {fileID: 21300000, guid: 44cd2d6cd25a142c29206ee4c950aadd, type: 3}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: ee6a17ff73aef4f398c278ff83ba3962, type: 3}
