@@ -7,6 +7,7 @@ public enum MenuType
     GAME_PARAM,
     STICKER_SCROLL,
     THE_MATCH,
+    CATH_PHRASE,
 }
 
 public class UIManager : MonoBehaviour
@@ -17,6 +18,7 @@ public class UIManager : MonoBehaviour
     public GameObject stickerScroll;
     public GameObject gameParamMenu;
     public GameObject theMacthPlayerMenu;
+    public GameObject cathPhrase;
 
     public static UIManager instance;
 
@@ -44,6 +46,7 @@ public class UIManager : MonoBehaviour
         contextualText.SetActive(false);
         stickerScroll.SetActive(false);
         theMacthPlayerMenu.SetActive(false);
+        cathPhrase.SetActive(false);
 
         switch (menuType)
         {
@@ -65,7 +68,13 @@ public class UIManager : MonoBehaviour
                 break;
 
             case MenuType.THE_MATCH:
+                contextualText.SetActive(true);
                 theMacthPlayerMenu.SetActive(true);
+                break;
+
+            case MenuType.CATH_PHRASE:
+                contextualText.SetActive(true);
+                cathPhrase.SetActive(true);
                 break;
         }
     }

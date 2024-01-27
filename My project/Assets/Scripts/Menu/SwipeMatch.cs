@@ -1,17 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SwipeMatch : MonoBehaviour
 {
     public MiniatureInfo miniature;
+    public Button next;
 
     GameManager GM;
+    UIManager UIM;
 
     private void Start()
     {
         GM = GameManager.instance;
+        UIM = UIManager.instance;
+
         GetRandomPlayer();
+        next.onClick.AddListener(delegate { UIM.SetActiveMenu(MenuType.CATH_PHRASE); });
     }
 
     void GetRandomPlayer()
