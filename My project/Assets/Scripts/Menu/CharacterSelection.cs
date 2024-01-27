@@ -7,7 +7,7 @@ public class CharacterSelection : MonoBehaviour
 {
     public ProfilCreationMenu profilCreationMenu;
 
-    Image selectedImage = null;
+    //Image selectedImage = null;
 
     GameManager GM;
     UIManager UIM;
@@ -68,8 +68,14 @@ public class CharacterSelection : MonoBehaviour
     {
         profilCreationMenu.next.onClick.AddListener(delegate { GM.CreatePlayer(
             GetPlayerName(),
-            profilCreationMenu.characterSelection.hair.index
-            ); });
+            profilCreationMenu.characterSelection.hair.index,
+            profilCreationMenu.characterSelection.eyes.index,
+            profilCreationMenu.characterSelection.nose.index,
+            profilCreationMenu.characterSelection.mouth.index,
+            profilCreationMenu.characterSelection.clothe.index
+            );
+            UIM.SetActiveMenu(MenuType.GAME_PARAM);
+        });
 
         // Character Creation
         profilCreationMenu.characterSelection.hair.next.onClick.AddListener(delegate { SelectAssets(profilCreationMenu.characterSelection.hair); });

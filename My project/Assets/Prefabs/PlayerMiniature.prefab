@@ -518,6 +518,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3618523275114187737}
   - component: {fileID: 3685077932107827991}
+  - component: {fileID: 8361020612273660634}
   m_Layer: 5
   m_Name: PlayerMiniature
   m_TagString: Untagged
@@ -555,6 +556,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5058745223134434538}
   m_CullTransparentMesh: 1
+--- !u!114 &8361020612273660634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5058745223134434538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ba24d3424331194081448df71f0a294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: {fileID: 1147326516014850722}
+  hair: {fileID: 3896126997728998223}
+  eyes: {fileID: 5913877532674680594}
+  nose: {fileID: 2913776200640523454}
+  mouth: {fileID: 7510030421775358409}
+  clothe: {fileID: 483331104781724944}
+  hairAssets: {fileID: 11400000, guid: 84a5c0f3f426b0b4795b54ca9665ffc8, type: 2}
+  eyesAssets: {fileID: 11400000, guid: 39c860ee08aaf504b855f009a61503e0, type: 2}
+  noseAssets: {fileID: 11400000, guid: 317f57ff34be58540be7b27979d3d225, type: 2}
+  mouthAssets: {fileID: 11400000, guid: 83873b57bb6f17045887c421fcaa2737, type: 2}
+  clotheAssets: {fileID: 11400000, guid: d2a87f71bd25edc418e7b603c1b7d64d, type: 2}
 --- !u!1 &5786259084859620791
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject playerPrefabs;
     public List<DataPlayer> players = new List<DataPlayer>();
-    int index = 0;
+    public GameParamMenu gameParamMenu;
 
     public static GameManager instance;
 
@@ -19,13 +19,20 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
-    public void CreatePlayer(string name, int hairIndex) 
+    public void CreatePlayer(string name, int hairIndex, int eyesIndex, int noseIndex, int mouthIndex, int clothIndex) 
     {
         GameObject instance = Instantiate(playerPrefabs, transform);
         instance.gameObject.name = name;
         DataPlayer player = instance.GetComponent<DataPlayer>();
         player.playerName = name;
         player.hairIndex = hairIndex;
-        players.Add(player);  
+        player.eyesIndex = eyesIndex;
+        player.noseIndex = noseIndex;   
+        player.mouthIndex = mouthIndex;
+        player.clotheIndex = clothIndex;
+        players.Add(player);
+        gameParamMenu.CreatePlayer(name,hairIndex,eyesIndex,noseIndex,mouthIndex,clothIndex);
     }
+
+
 }

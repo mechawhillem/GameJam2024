@@ -39,7 +39,7 @@ public class UIManager : MonoBehaviour
     {
             mainMenu.SetActive(false);
             profilCreationMenu.SetActive(false);
-            //gameParamMenu.SetActive(false);
+            gameParamMenu.SetActive(false);
             contextualText.SetActive(false);
             stickerScroll.SetActive(false);
         switch (menuType) 

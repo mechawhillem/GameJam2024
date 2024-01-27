@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Clothes
   m_EditorClassIdentifier: 
   sprites:
+  - {fileID: 21300000, guid: 881a4e9264c170747ba451f6083635ae, type: 3}
   - {fileID: 21300000, guid: 330413798cc444c6ca288ab5068593e2, type: 3}
   - {fileID: 21300000, guid: 9ab6038ddcd9a4cc8a44fbe42007c8d4, type: 3}
   - {fileID: 21300000, guid: 02efda3577f654913bb09ba19bf3808d, type: 3}
