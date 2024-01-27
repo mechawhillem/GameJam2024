@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3908626860645013485}
   m_Layer: 5
-  m_Name: MessagePretendant
+  m_Name: MessagePretendantSaved
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
