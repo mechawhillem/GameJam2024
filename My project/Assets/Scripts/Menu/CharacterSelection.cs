@@ -2,18 +2,21 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static CharacterSelection.ProfilCreationMenu.CharacterParts;
 
 public class CharacterSelection : MonoBehaviour
 {
     public ProfilCreationMenu profilCreationMenu;
+
+    Image selectedImage = null;
+
+    GameManager GM;
     UIManager UIM;
 
     [Serializable]
     public class ProfilCreationMenu
     {
         public TextMeshProUGUI playerName;
-        public Button Next;
+        public Button next;
         public CharacterParts characterSelection;
         public HobbysSelection hobbysSelection;
 
@@ -29,7 +32,7 @@ public class CharacterSelection : MonoBehaviour
             [Serializable]
             public class Part
             {
-                public int index = 0;
+                [HideInInspector] public int index = 0;
                 public CharacterAssets assets;
                 public Button next;
                 public Button before;
@@ -40,17 +43,21 @@ public class CharacterSelection : MonoBehaviour
         [Serializable]
         public class HobbysSelection
         {
-            public GameObject menu;
             public HobbysAssets hobbysAssets;
             public Button firstHobbys;
+            [HideInInspector] public int firstHobbysIndex;
             public Button secondHobbys;
+            [HideInInspector] public int secondHobbysIndex;
             public Button redFlag;
+            [HideInInspector] public int redFlagIndex;
         }
     }
 
     private void Start()
     {
+        GM = GameManager.instance;
         UIM = UIManager.instance;
+
         Bind();
     }
 
@@ -59,6 +66,11 @@ public class CharacterSelection : MonoBehaviour
     /// </summary>
     void Bind()
     {
+        profilCreationMenu.next.onClick.AddListener(delegate { GM.CreatePlayer(
+            GetPlayerName(),
+            profilCreationMenu.characterSelection.hair.index
+            ); });
+
         // Character Creation
         profilCreationMenu.characterSelection.hair.next.onClick.AddListener(delegate { SelectAssets(profilCreationMenu.characterSelection.hair); });
         profilCreationMenu.characterSelection.hair.before.onClick.AddListener(delegate { SelectAssets(profilCreationMenu.characterSelection.hair, false); });
@@ -74,11 +86,21 @@ public class CharacterSelection : MonoBehaviour
 
         profilCreationMenu.characterSelection.clothe.next.onClick.AddListener(delegate { SelectAssets(profilCreationMenu.characterSelection.clothe); });
         profilCreationMenu.characterSelection.clothe.before.onClick.AddListener(delegate { SelectAssets(profilCreationMenu.characterSelection.clothe, false); });
-
+        /*
         // Hobby Selection
-        ProfilCreationMenu.HobbysSelection hob = profilCreationMenu.hobbysSelection;
-        //hob
-
+        profilCreationMenu.hobbysSelection.firstHobbys.onClick.AddListener(delegate { 
+            UIM.SetActiveMenu(MenuType.STICKER_SCROLL);
+            selectedImage = GetComponent<Image>();
+        });
+        profilCreationMenu.hobbysSelection.secondHobbys.onClick.AddListener(delegate { 
+            UIM.SetActiveMenu(MenuType.STICKER_SCROLL);
+            selectedImage = GetComponent<Image>();
+        });
+        profilCreationMenu.hobbysSelection.redFlag.onClick.AddListener(delegate { 
+            UIM.SetActiveMenu(MenuType.STICKER_SCROLL);
+            selectedImage = GetComponent<Image>();
+        });
+        */
     }
 
     void SelectAssets(ProfilCreationMenu.CharacterParts.Part part, bool isNext = true)
@@ -89,4 +111,8 @@ public class CharacterSelection : MonoBehaviour
         part.image.sprite = part.assets.sprites[part.index];
     }
 
+    string GetPlayerName() 
+    {
+        return profilCreationMenu.playerName.text;
+    }
 }
