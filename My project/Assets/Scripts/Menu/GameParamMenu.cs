@@ -25,7 +25,7 @@ public class GameParamMenu : MonoBehaviour
 
     public void Bind() 
     {
-        gameParamMenu.play.onClick.AddListener(delegate { });
+        gameParamMenu.play.onClick.AddListener(delegate { UIM.SetActiveMenu(MenuType.THE_MATCH); });
         gameParamMenu.addPlayer.onClick.AddListener(delegate { UIM.SetActiveMenu(MenuType.PROFIL_CREATION); });
     }
 

@@ -6,7 +6,7 @@ public enum MenuType
     PROFIL_CREATION,
     GAME_PARAM,
     STICKER_SCROLL,
-
+    THE_MATCH,
 }
 
 public class UIManager : MonoBehaviour
@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour
     public GameObject contextualText;
     public GameObject stickerScroll;
     public GameObject gameParamMenu;
+    public GameObject theMacthPlayerMenu;
 
     public static UIManager instance;
 
@@ -35,14 +36,16 @@ public class UIManager : MonoBehaviour
     /// D�finis le menu a activer (d�sactive tout les autres)
     /// </summary>
     /// <param name="menuType">Le type de menu a activer</param>
-    public void SetActiveMenu(MenuType menuType) 
+    public void SetActiveMenu(MenuType menuType)
     {
-            mainMenu.SetActive(false);
-            profilCreationMenu.SetActive(false);
-            gameParamMenu.SetActive(false);
-            contextualText.SetActive(false);
-            stickerScroll.SetActive(false);
-        switch (menuType) 
+        mainMenu.SetActive(false);
+        profilCreationMenu.SetActive(false);
+        gameParamMenu.SetActive(false);
+        contextualText.SetActive(false);
+        stickerScroll.SetActive(false);
+        theMacthPlayerMenu.SetActive(false);
+
+        switch (menuType)
         {
             case MenuType.MAIN:
                 mainMenu.SetActive(true);
@@ -55,10 +58,15 @@ public class UIManager : MonoBehaviour
             case MenuType.GAME_PARAM:
                 gameParamMenu.SetActive(true);
                 break;
+
             case MenuType.STICKER_SCROLL:
                 contextualText.SetActive(true);
                 stickerScroll.SetActive(true);
                 break;
+
+            case MenuType.THE_MATCH:
+                theMacthPlayerMenu.SetActive(true);
+                break;
         }
-    } 
+    }
 }
