@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a96eb4244fb86d6488fd4d43102c5935, type: 3}
   m_Name: Noses
   m_EditorClassIdentifier: 
-  sprites: []
+  sprites:
+  - {fileID: 21300000, guid: d6b48e0b7e4d04756ae4530035d8cfe6, type: 3}
+  - {fileID: 21300000, guid: a42fb8c1b81674d748f90fa1f6b26483, type: 3}
+  - {fileID: 21300000, guid: 1d189cdcfe64d460e95c5360b0cff980, type: 3}
+  - {fileID: 21300000, guid: 6cd61aaa3ff984cb3b8c01011fef41eb, type: 3}

@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a96eb4244fb86d6488fd4d43102c5935, type: 3}
   m_Name: Clothes
   m_EditorClassIdentifier: 
-  sprites: []
+  sprites:
+  - {fileID: 21300000, guid: 330413798cc444c6ca288ab5068593e2, type: 3}
+  - {fileID: 21300000, guid: 9ab6038ddcd9a4cc8a44fbe42007c8d4, type: 3}
+  - {fileID: 21300000, guid: 02efda3577f654913bb09ba19bf3808d, type: 3}
+  - {fileID: 21300000, guid: 8a54c38f3dede41b8acef58c247702ea, type: 3}
+  - {fileID: 21300000, guid: 82d12447d46cb4cf889c0b8cc749848d, type: 3}

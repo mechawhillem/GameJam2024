@@ -12,4 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a96eb4244fb86d6488fd4d43102c5935, type: 3}
   m_Name: Eyes
   m_EditorClassIdentifier: 
-  sprites: []
+  sprites:
+  - {fileID: 21300000, guid: 479233cd96d93447aa68ed56743b3c95, type: 3}
+  - {fileID: 21300000, guid: cca295d69487541dc81f13ba5d0c68cc, type: 3}
+  - {fileID: 21300000, guid: d114763f36a5447c4977a94c8733c945, type: 3}
+  - {fileID: 21300000, guid: be9a61a77e6d842cfb4a72d8ef3a10c5, type: 3}
+  - {fileID: 21300000, guid: e43a05ef321bf4645b3f0944a56aa62f, type: 3}
+  - {fileID: 21300000, guid: b62f3d7749b054781aa5c96130c911ff, type: 3}
+  - {fileID: 21300000, guid: 96b88292cdd064b288c0f66abf8873f0, type: 3}
+  - {fileID: 21300000, guid: 1d32bd8fc099e49cc99517770b43a231, type: 3}
+  - {fileID: 21300000, guid: c55066aa18e14424da865b6338bf3df6, type: 3}
+  - {fileID: 21300000, guid: 40620dcb3c4ae4d84ad04292463695e1, type: 3}
