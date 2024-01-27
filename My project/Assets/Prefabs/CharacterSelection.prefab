@@ -2138,6 +2138,12 @@ MonoBehaviour:
         next: {fileID: 1693295564840685105}
         before: {fileID: 6027033670618048297}
         image: {fileID: 220174988330656689}
+    hobbysSelection:
+      menu: {fileID: 0}
+      hobbysAssets: {fileID: 0}
+      firstHobbys: {fileID: 0}
+      secondHobbys: {fileID: 0}
+      redFlag: {fileID: 0}
 --- !u!1 &6847333786574446786
 GameObject:
   m_ObjectHideFlags: 0
