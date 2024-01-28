@@ -1,14 +1,20 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using static MainMenu;
 
 public class GameParamMenu : MonoBehaviour
 {
     public GameParam gameParamMenu;
     public GameObject miniaturePrefabs;
     public Transform minatureHolder;
+    int minPlayer = 3;
+
+    bool isFirst = true;
 
     UIManager UIM;
+    GameManager GM;
 
     [Serializable]
     public class GameParam
@@ -19,8 +25,33 @@ public class GameParamMenu : MonoBehaviour
 
     void Start()
     {
+        GM = GameManager.instance;
         UIM = UIManager.instance;
         Bind();
+        UIM.ChangeContexteText(GetText());
+        isFirst = false;
+    }
+
+    private void OnEnable()
+    {
+        if (!isFirst)
+        {
+            UIM.ChangeContexteText(GetText());
+        }
+    }
+
+    string GetText() 
+    {
+        if (minPlayer - GM.players.Count > 0)
+        {
+            gameParamMenu.play.interactable = false;
+            return $"Il faut encore {minPlayer - GM.players.Count} joueurs";
+        }
+        else
+        {
+            gameParamMenu.play.interactable = true;
+            return $"Vous pouvez commencer a jouer !";
+        }
     }
 
     public void Bind() 

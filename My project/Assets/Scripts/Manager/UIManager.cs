@@ -79,6 +79,7 @@ public class UIManager : MonoBehaviour
                 break;
 
             case MenuType.GAME_PARAM:
+                contextualText.SetActive(true);
                 gameParamMenu.SetActive(true);
                 break;
 
