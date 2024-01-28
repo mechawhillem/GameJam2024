@@ -11,13 +11,14 @@ GameObject:
   - component: {fileID: 3660926372948360436}
   - component: {fileID: 8060250576703494549}
   - component: {fileID: 7494485475105325949}
+  - component: {fileID: 7492096409539993515}
   m_Layer: 5
   m_Name: CatchsPhrasesMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3660926372948360436
 RectTransform:
   m_ObjectHideFlags: 0
@@ -75,6 +76,78 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &7492096409539993515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737250053203251334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27f2d324a866569478619e3c4d53d5dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectionOne: {fileID: 8460723114245077934}
+  selectionSecond: {fileID: 4497824988218972283}
+  selectionThird: {fileID: 3477918085505492302}
+  phrases:
+  - "Tu crois au coup de foudre culinaire ? Depuis que j'ai crois\xE9 tes yeux, j'ai
+    l'impression d'avoir trouv\xE9 le poireau manquant \xE0 ma recette de bonheur."
+  - "Tu crois aux contes de f\xE9es ? Parce que je viens de trouver le balai parfait
+    pour notre histoire enchant\xE9e, et il manque juste une sorci\xE8re sp\xE9ciale
+    \xE0 ses c\xF4t\xE9s."
+  - "Si j'\xE9tais un balai magique, je t'emporterais avec moi vers des aventures
+    extraordinaires.\u201D"
+  - "Si la beaut\xE9 \xE9tait une esp\xE8ce d'insecte, tu serais sans aucun doute
+    un papillon rare, pr\xEAt \xE0 faire battre les ailes de mon c\u0153ur."
+  - "Est-ce que tu ressens ces papillons aussi, ou c'est juste moi qui ai attrap\xE9
+    le syndrome du jardin enchant\xE9 en te voyant ?"
+  - "Si j'\xE9tais une scolopendre, je n'aurais certainement pas autant de jambes
+    pour danser, mais je serais quand m\xEAme pr\xEAt(e) \xE0 faire quelques pas
+    de danse avec toi."
+  - "Si j'\xE9tais un cale\xE7on, je voudrais \xEAtre le tien, juste pour \xEAtre
+    pr\xE8s de toi tous les jours."
+  - "Ton charme est comme l'aloe vera, apaisant et rafra\xEEchissant. Passer du temps
+    ensemble serait comme une douce caresse pour l'\xE2me."
+  - "Si j'\xE9tais un m\xE8tre mesureur, je ne mesurerais que l'impact de ton sourire
+    sur mon c\u0153ur. \xC7a donne combien, selon toi ?"
+  - "Si tu \xE9tais un m\xE8tre mesureur, tu d\xE9passerais largement la norme de
+    la beaut\xE9. Peux-tu me donner la mesure de ton sourire \xE9blouissant ?"
+  - "Ton regard est d\xE9j\xE0 captivant, mais avec une paire de jumelles, j'imagine
+    que je pourrais voir encore plus de d\xE9tails fascinants."
+  - "\"Ton regard enflamme mes pens\xE9es, comme un smut pr\xEAt \xE0 s'\xE9crire.
+    Pr\xEAt(e) \xE0 explorer ensemble des chapitres \xE9pic\xE9s?\u201D"
+  - "\"Est-ce que tu as un plan, ou est-ce que je peux t'offrir le mien pour un premier
+    rendez-vous ?\u201D"
+  - "\"Si tu \xE9tais une pizza, tu serais la reine de mon c\u0153ur, avec extra
+    fromage, bien s\xFBr.\u201D"
+  - "\"Si j'\xE9tais un insecte, je serais un papillon de nuit. Pourquoi ? Parce
+    que je suis attir\xE9(e) par ta lumi\xE8re.\u201D"
+  - "\"Si l'amour \xE9tait une drogue, tu serais le dealer id\xE9al, car tu m'as
+    compl\xE8tement accroch\xE9(e).\u201D"
+  - "\"Tu serais pas un parking ? Parce que je veux me garer dans ta vie.\u201D"
+  - "\"Est-ce que tu crois au coup de foudre, ou est-ce que je dois repasser avec
+    un paratonnerre?\u201D"
+  - "\"Est-ce que tu es un four ? Parce que quand je te regarde, \xE7a chauffe s\xE9rieusement.\""
+  - "\"Est-ce que tu es une \xE9cole? Parce que je voudrais te draguer pendant plusieurs
+    ann\xE9es.\u201D"
+  - "\"Si tu \xE9tais une patate, tu serais une patate douce, parce que tu es plut\xF4t
+    sympa !\u201D"
+  - "\"Est-ce que tu as un plan ? Parce que je me suis perdu(e) dans tes courbes.\u201D"
+  - "\"Tu serais pas un barbecue ? Parce que t\u2019allumes mon feu int\xE9rieur,
+    b\xE9b\xE9.\u201D"
+  - "\"Est-ce que tu es une \xE9toile filante ? Parce que chaque fois que je te vois,
+    un v\u0153u loufoque me vient \xE0 l'esprit.\u201D"
+  - "\"Est-ce que tu es un magasin IKEA ? Parce que d\xE8s que je te vois, j'ai envie
+    de te monter dans mon salon.\u201D"
+  - "\"Est-ce que tu es un clavier ? Parce que tu es ma touche pr\xE9f\xE9r\xE9e,
+    et j'aimerais te jouer toute la nuit.\u201D"
+  - "\"Est-ce que tu es une ampoule ? Parce que d\xE8s que tu es l\xE0, tu allumes
+    toute la pi\xE8ce"
+  - "\"Est-ce que tu es un fer \xE0 repasser ? Parce que tu me fais sentir tout chaud
+    \xE0 l'int\xE9rieur, m\xEAme si je ne sais pas vraiment comment te manier.\u201D"
+  - "Si j\u2019\xE9tais une abeille je butinerais bien ton petit coquelicot"
 --- !u!1001 &2737617329637440350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -105,7 +178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_AnchorMin.x
@@ -113,15 +186,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 960
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 480.68668
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_LocalPosition.x
@@ -153,11 +226,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 540
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -841.02997
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -176,6 +249,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
+--- !u!114 &4497824988218972283 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1987920922368336677, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
+  m_PrefabInstance: {fileID: 2737617329637440350}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &7487765094866758541 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
@@ -211,7 +295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_AnchorMin.x
@@ -219,15 +303,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 960
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 480.68668
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_LocalPosition.x
@@ -259,11 +343,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 540
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -1381.7167
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -282,6 +366,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
+--- !u!114 &3477918085505492302 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1987920922368336677, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
+  m_PrefabInstance: {fileID: 3157744178434328171}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &7621943538422830776 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
@@ -317,7 +412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_AnchorMin.x
@@ -325,15 +420,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 960
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 480.68668
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_LocalPosition.x
@@ -365,11 +460,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 540
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -300.34332
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -393,3 +488,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
   m_PrefabInstance: {fileID: 7997272894840723595}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8460723114245077934 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1987920922368336677, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
+  m_PrefabInstance: {fileID: 7997272894840723595}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
