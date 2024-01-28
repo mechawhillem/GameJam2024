@@ -7,6 +7,7 @@ public enum MenuType
     GAME_PARAM,
     STICKER_SCROLL,
     THE_MATCH,
+    THE_SWIPER,
     CATH_PHRASE,
 }
 
@@ -69,7 +70,16 @@ public class UIManager : MonoBehaviour
 
             case MenuType.THE_MATCH:
                 contextualText.SetActive(true);
+                contextualText.GetComponent<ContextualManage>().ChangeContexte($"{matchname} est le match");
                 theMacthPlayerMenu.SetActive(true);
+                theMacthPlayerMenu.GetComponent<SwipeMatch>().switchMode(false);
+                break;
+
+            case MenuType.THE_SWIPER:
+                contextualText.SetActive(true);
+                contextualText.GetComponent<ContextualManage>().ChangeContexte($"Au tour de {swiper} !");
+                theMacthPlayerMenu.SetActive(true);
+                theMacthPlayerMenu.GetComponent<SwipeMatch>().switchMode(true);
                 break;
 
             case MenuType.CATH_PHRASE:

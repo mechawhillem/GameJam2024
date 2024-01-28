@@ -6,6 +6,8 @@ public class SwipeMatch : MonoBehaviour
     public MiniatureInfo miniature;
     public Button next;
 
+    public GameObject ButtonLike, ButtonReady;
+
     GameManager GM;
     UIManager UIM;
 
@@ -29,5 +31,15 @@ public class SwipeMatch : MonoBehaviour
         miniature.mouth.sprite = miniature.mouthAssets.sprites[GM.players[player].mouthIndex];
         miniature.clothe.sprite = miniature.clotheAssets.sprites[GM.players[player].clotheIndex];
 
+    }
+
+    public void switchMode(bool state){
+            if(state){
+                ButtonLike.SetActive(true);
+                ButtonReady.SetActive(false);
+            }else{
+                ButtonLike.SetActive(false);
+                ButtonReady.SetActive(true);
+            }
     }
 }

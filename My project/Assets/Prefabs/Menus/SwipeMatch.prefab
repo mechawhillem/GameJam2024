@@ -85,7 +85,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1463128097399732390}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -330,6 +330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4441531963407812336}
   - component: {fileID: 1629537607148921867}
+  - component: {fileID: 195456589361073440}
   m_Layer: 5
   m_Name: SwipeMatch
   m_TagString: Untagged
@@ -368,6 +369,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5284594802746997055}
   m_CullTransparentMesh: 1
+--- !u!114 &195456589361073440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5284594802746997055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50084f8d82b322f45832616b5def8fb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  miniature: {fileID: 3244497395925361868}
+  next: {fileID: 2180101353844329041}
+  ButtonLike: {fileID: 6143110977493924049}
+  ButtonReady: {fileID: 3470165344845766114}
 --- !u!1 &5311812562818335626
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,7 +538,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6633459232346184748
 RectTransform:
   m_ObjectHideFlags: 0
@@ -742,6 +759,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0c64059e8428435880e11ceac88d4f8, type: 3}
+--- !u!114 &3244497395925361868 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8361020612273660634, guid: a0c64059e8428435880e11ceac88d4f8, type: 3}
+  m_PrefabInstance: {fileID: 6417219092469892630}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ba24d3424331194081448df71f0a294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &7726234660328426959 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3618523275114187737, guid: a0c64059e8428435880e11ceac88d4f8, type: 3}
