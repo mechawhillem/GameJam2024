@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class SwipeMatch : MonoBehaviour
 {
@@ -7,6 +8,10 @@ public class SwipeMatch : MonoBehaviour
     public Button next;
     public Button like;
     public Button vote;
+
+    public Animator animator;
+
+    private Animator anim; 
 
     [HideInInspector] public bool state = false;
     [HideInInspector] public bool isEnd = false;
@@ -23,15 +28,34 @@ public class SwipeMatch : MonoBehaviour
         GM = GameManager.instance;
         UIM = UIManager.instance;
 
+        animator = GetComponent<Animator>();
+
         GetRandomPlayer();
 
-        next.onClick.AddListener(delegate { UIM.SetActiveMenu(MenuType.CATH_PHRASE); });
-        like.onClick.AddListener(delegate { UIM.SetActiveMenu(MenuType.MESSAGE_PRETENDANT); });
+
+        next.onClick.AddListener(delegate { StartCoroutine(WaitNextAnim()); });
+        like.onClick.AddListener(delegate { StartCoroutine(WaitLikeAnim()); });
         vote.onClick.AddListener(delegate { UIM.SetActiveMenu(MenuType.MESSAGE_MATCH); });
+
+    }
+
+    private IEnumerator WaitNextAnim()
+    {
+        animator.Play("Out");
+        yield return new WaitForSeconds(1);
+        UIM.SetActiveMenu(MenuType.CATH_PHRASE);
+    }
+
+    private IEnumerator WaitLikeAnim()
+    {
+        animator.Play("Out");
+        yield return new WaitForSeconds(1);
+        UIM.SetActiveMenu(MenuType.MESSAGE_PRETENDANT);
     }
 
     private void OnEnable()
     {
+        animator.Play("In");   
         if (state && isEnd == false)
         {
             TakePlayers();
