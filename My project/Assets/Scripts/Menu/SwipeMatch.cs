@@ -83,7 +83,7 @@ public class SwipeMatch : MonoBehaviour
         {
             GM.currentPlayer = GM.players[index].playerName;
             GM.currentIndexPlayer = index;
-            UIM.ChangeContexteText($"Au tour de {GM.players[index].playerName}");
+            UIM.ChangeContexteText($"{GM.players[index].playerName} souhaites-tu matcher avec...");
         }
         else 
         {
