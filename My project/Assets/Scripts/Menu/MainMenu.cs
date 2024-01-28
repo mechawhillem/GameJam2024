@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     public Main mainMenu;
+    public Button helper;
+
     UIManager UIM;
 
     [Serializable]
@@ -20,10 +22,11 @@ public class MainMenu : MonoBehaviour
     }
 
     /// <summary>
-    /// Lie les events lié au menu principale
+    /// Lie les events li? au menu principale
     /// </summary>
     void Bind()
     {
         mainMenu.play.onClick.AddListener(() => UIM.SetActiveMenu(MenuType.PROFIL_CREATION));
+        helper.onClick.AddListener(() => UIM.SetActiveMenu(MenuType.HELPER));
     }
 }

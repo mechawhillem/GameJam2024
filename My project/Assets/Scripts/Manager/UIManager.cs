@@ -15,6 +15,7 @@ public enum MenuType
     MESSAGE_END,
     PROFIL,
     SCORE,
+    HELPER,
 }
 
 public class UIManager : MonoBehaviour
@@ -31,6 +32,7 @@ public class UIManager : MonoBehaviour
     public GameObject messageMenuEnd;
     public GameObject profile;
     public GameObject scoreMenu;
+    public GameObject helperMenu;
 
 
 
@@ -68,6 +70,8 @@ public class UIManager : MonoBehaviour
         messageMenuEnd.SetActive(false);
         profile.SetActive(false);
         scoreMenu.SetActive(false);
+        helperMenu.SetActive(false);
+
 
         switch (menuType)
         {
@@ -126,6 +130,10 @@ public class UIManager : MonoBehaviour
                 break;
             case MenuType.SCORE:
                 scoreMenu.SetActive(true);
+                break;
+
+            case MenuType.HELPER:
+                helperMenu.SetActive(true);
                 break;
         }
     }

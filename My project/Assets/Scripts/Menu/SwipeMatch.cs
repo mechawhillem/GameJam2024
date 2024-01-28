@@ -10,6 +10,7 @@ public class SwipeMatch : MonoBehaviour
     public Button vote;
 
     public Animator animator;
+    public AudioSource swipeSound;
 
     private Animator anim; 
 
@@ -29,6 +30,7 @@ public class SwipeMatch : MonoBehaviour
         UIM = UIManager.instance;
 
         animator = GetComponent<Animator>();
+        swipeSound.Play();
 
         GetRandomPlayer();
 
@@ -42,6 +44,7 @@ public class SwipeMatch : MonoBehaviour
     private IEnumerator WaitNextAnim()
     {
         animator.Play("Out");
+        swipeSound.Play();
         yield return new WaitForSeconds(1);
         UIM.SetActiveMenu(MenuType.CATH_PHRASE);
     }
@@ -49,13 +52,16 @@ public class SwipeMatch : MonoBehaviour
     private IEnumerator WaitLikeAnim()
     {
         animator.Play("Out");
+        swipeSound.Play();
         yield return new WaitForSeconds(1);
         UIM.SetActiveMenu(MenuType.MESSAGE_PRETENDANT);
     }
 
     private void OnEnable()
     {
-        animator.Play("In");   
+        animator.Play("In");
+        swipeSound.Play();
+
         if (state && isEnd == false)
         {
             TakePlayers();

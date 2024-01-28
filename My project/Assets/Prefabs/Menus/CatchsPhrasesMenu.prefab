@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8060250576703494549}
   - component: {fileID: 7494485475105325949}
   - component: {fileID: 7492096409539993515}
-  - component: {fileID: 4126747300163119038}
   m_Layer: 5
   m_Name: CatchsPhrasesMenu
   m_TagString: Untagged
@@ -134,34 +133,6 @@ MonoBehaviour:
   - "Si on avait un date \xE0 IKEA, qu\u2019est ce qu\u2019on y ferais?"
   - Quel moyen de transport est le plus romantique selon toi ? Pourquoi ?
   - "Si je devais \xEAtre un appareil \xE9lectrom\xE9nager, lequel je serais ?"
---- !u!114 &4126747300163119038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 737250053203251334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27f2d324a866569478619e3c4d53d5dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonOne: {fileID: 8746268436328353829}
-  buttonTwo: {fileID: 3630184882975110128}
-  buttonThree: {fileID: 4345540465083649733}
-  selectionOne: {fileID: 8460723114245077934}
-  selectionSecond: {fileID: 4497824988218972283}
-  selectionThird: {fileID: 3477918085505492302}
-  indexOne: 0
-  indexTwo: 0
-  indexThree: 0
-  phrases:
-  - Test 1
-  - Test 2
-  - Test 3
-  - Test 4
-  - Test 5
-  - Test 6
 --- !u!1001 &2737617329637440350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -173,6 +144,30 @@ PrefabInstance:
     - target: {fileID: 1656993073684564999, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_Name
       value: ButtonCatchPhrase (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701509216462129326, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701509216462129326, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701509216462129326, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701509216462129326, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701509216462129326, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701509216462129326, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_Pivot.x
@@ -302,6 +297,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonCatchPhrase (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1701509216462129326, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701509216462129326, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701509216462129326, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701509216462129326, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701509216462129326, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701509216462129326, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -429,6 +448,30 @@ PrefabInstance:
     - target: {fileID: 1656993073684564999, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_Name
       value: ButtonCatchPhrase
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701509216462129326, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701509216462129326, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701509216462129326, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701509216462129326, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701509216462129326, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701509216462129326, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4761460231771525331, guid: 4f7e879d482b64c37a323dbcbc04c3ee, type: 3}
       propertyPath: m_Pivot.x
