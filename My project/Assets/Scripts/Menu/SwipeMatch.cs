@@ -5,6 +5,7 @@ public class SwipeMatch : MonoBehaviour
 {
     public MiniatureInfo miniature;
     public Button next;
+    public Button like;
 
     public GameObject ButtonLike, ButtonReady;
 
@@ -18,6 +19,7 @@ public class SwipeMatch : MonoBehaviour
 
         GetRandomPlayer();
         next.onClick.AddListener(delegate { UIM.SetActiveMenu(MenuType.CATH_PHRASE); });
+        like.onClick.AddListener(delegate { UIM.SetActiveMenu(MenuType.MESSAGE_PRETENDANT); });
     }
 
     void GetRandomPlayer()
@@ -30,16 +32,21 @@ public class SwipeMatch : MonoBehaviour
         miniature.nose.sprite = miniature.noseAssets.sprites[GM.players[player].noseIndex];
         miniature.mouth.sprite = miniature.mouthAssets.sprites[GM.players[player].mouthIndex];
         miniature.clothe.sprite = miniature.clotheAssets.sprites[GM.players[player].clotheIndex];
-
+        UIM.ChangeContexteText($"{GM.players[player].playerName} est le match");
+        GM.matchName = GM.players[player].playerName;
     }
 
-    public void switchMode(bool state){
-            if(state){
-                ButtonLike.SetActive(true);
-                ButtonReady.SetActive(false);
-            }else{
-                ButtonLike.SetActive(false);
-                ButtonReady.SetActive(true);
-            }
+    public void switchMode(bool state)
+    {
+        if (state)
+        {
+            ButtonLike.SetActive(true);
+            ButtonReady.SetActive(false);
+        }
+        else
+        {
+            ButtonLike.SetActive(false);
+            ButtonReady.SetActive(true);
+        }
     }
 }

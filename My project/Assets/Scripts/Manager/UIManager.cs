@@ -9,6 +9,9 @@ public enum MenuType
     THE_MATCH,
     THE_SWIPER,
     CATH_PHRASE,
+    MESSAGE_PRETENDANT,
+    MESSAGE_MATCH,
+    MESSAGE_END,
 }
 
 public class UIManager : MonoBehaviour
@@ -20,8 +23,13 @@ public class UIManager : MonoBehaviour
     public GameObject gameParamMenu;
     public GameObject theMacthPlayerMenu;
     public GameObject cathPhrase;
+    public GameObject messageMenuPretendant;
+    public GameObject messageMenuMatch;
+    public GameObject messageMenuEnd;
 
     public static UIManager instance;
+
+    [HideInInspector] public string swiper;
 
     void Awake()
     {
@@ -48,6 +56,9 @@ public class UIManager : MonoBehaviour
         stickerScroll.SetActive(false);
         theMacthPlayerMenu.SetActive(false);
         cathPhrase.SetActive(false);
+        messageMenuPretendant.SetActive(false);
+        messageMenuMatch.SetActive(false);
+        messageMenuEnd.SetActive(false);
 
         switch (menuType)
         {
@@ -70,14 +81,13 @@ public class UIManager : MonoBehaviour
 
             case MenuType.THE_MATCH:
                 contextualText.SetActive(true);
-                contextualText.GetComponent<ContextualManage>().ChangeContexte($"{matchname} est le match");
                 theMacthPlayerMenu.SetActive(true);
                 theMacthPlayerMenu.GetComponent<SwipeMatch>().switchMode(false);
                 break;
 
             case MenuType.THE_SWIPER:
                 contextualText.SetActive(true);
-                contextualText.GetComponent<ContextualManage>().ChangeContexte($"Au tour de {swiper} !");
+                //contextualText.GetComponent<ContextualManage>().ChangeContexte($"Au tour de {swiper} !");
                 theMacthPlayerMenu.SetActive(true);
                 theMacthPlayerMenu.GetComponent<SwipeMatch>().switchMode(true);
                 break;
@@ -86,6 +96,26 @@ public class UIManager : MonoBehaviour
                 contextualText.SetActive(true);
                 cathPhrase.SetActive(true);
                 break;
+
+            case MenuType.MESSAGE_PRETENDANT: 
+                contextualText.SetActive(true);
+                messageMenuPretendant.SetActive(true);
+                break;
+
+            case MenuType.MESSAGE_MATCH:
+                contextualText.SetActive(true);
+                messageMenuMatch.SetActive(true);
+                break;
+
+            case MenuType.MESSAGE_END:
+                contextualText.SetActive(true);
+                messageMenuEnd.SetActive(true);
+                break;
         }
+    }
+
+    public void ChangeContexteText(string newtext) 
+    {
+        contextualText.GetComponent<ContextualManage>().ChangeContexte(newtext);
     }
 }

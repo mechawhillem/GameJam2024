@@ -7,6 +7,13 @@ public class GameManager : MonoBehaviour
     public List<DataPlayer> players = new List<DataPlayer>();
     public GameParamMenu gameParamMenu;
 
+    [HideInInspector] public string matchName;
+    [HideInInspector] public string currentPlayer;
+
+    [HideInInspector] public string matchPhraseOne;
+
+    [HideInInspector] public string[] playersRespondOne;
+
     public static GameManager instance;
 
     private void Awake()
