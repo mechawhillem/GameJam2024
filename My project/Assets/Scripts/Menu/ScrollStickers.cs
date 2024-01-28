@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ScrollStickers : MonoBehaviour
 {
@@ -19,9 +18,9 @@ public class ScrollStickers : MonoBehaviour
             ContentInfo info = instance.GetComponent<ContentInfo>();
             info.index = i;
             info.image.sprite = assets.sprites[i];
-            info.button.onClick.AddListener(delegate { 
-                UIM.SetActiveMenu(MenuType.PROFIL_CREATION);
-                //characterSelection.selectedImage.sprite = assets.sprites[info.index];
+            info.button.onClick.AddListener(delegate {
+                characterSelection.stickerInt = info.index;
+                UIM.SetActiveMenu(MenuType.PROFIL_CREATION);            
             });
         }
     }

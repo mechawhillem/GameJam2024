@@ -1,14 +1,13 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-using static MainMenu;
 
 public class GameParamMenu : MonoBehaviour
 {
     public GameParam gameParamMenu;
     public GameObject miniaturePrefabs;
     public Transform minatureHolder;
+    public CharacterSelection charac;
     int minPlayer = 3;
 
     bool isFirst = true;
@@ -57,7 +56,10 @@ public class GameParamMenu : MonoBehaviour
     public void Bind() 
     {
         gameParamMenu.play.onClick.AddListener(delegate { UIM.SetActiveMenu(MenuType.THE_MATCH); });
-        gameParamMenu.addPlayer.onClick.AddListener(delegate { UIM.SetActiveMenu(MenuType.PROFIL_CREATION); });
+        gameParamMenu.addPlayer.onClick.AddListener(delegate { 
+            UIM.SetActiveMenu(MenuType.PROFIL_CREATION);
+            charac.ResetUI();
+        });
     }
 
     public void CreatePlayer(string name, int hairIndex, int eyesIndex, int noseIndex, int mouthIndex, int clothIndex)

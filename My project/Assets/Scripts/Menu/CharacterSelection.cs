@@ -2,13 +2,17 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static CharacterSelection;
 
 public class CharacterSelection : MonoBehaviour
 {
     public ProfilCreationMenu profilCreationMenu;
     public TMP_InputField inputFieldname;
-    //Image selectedImage = null;
+    [HideInInspector] public int stickerInt = -1;
+    public Image selectedImage1;
+    public Image selectedImage2;
+    public Image selectedImage3;
+
+    Image selected;
 
     GameManager GM;
     UIManager UIM;
@@ -64,6 +68,14 @@ public class CharacterSelection : MonoBehaviour
 
     private void OnEnable()
     {
+        if (stickerInt != -1)
+        {
+            selected.sprite = profilCreationMenu.hobbysSelection.hobbysAssets.sprites[stickerInt];
+        }
+    }
+
+    public void ResetUI() 
+    {
         inputFieldname.text = "";
         profilCreationMenu.characterSelection.hair.index = 0;
         profilCreationMenu.characterSelection.hair.image.sprite = profilCreationMenu.characterSelection.hair.assets.sprites[0];
@@ -90,7 +102,8 @@ public class CharacterSelection : MonoBehaviour
             profilCreationMenu.characterSelection.eyes.index,
             profilCreationMenu.characterSelection.nose.index,
             profilCreationMenu.characterSelection.mouth.index,
-            profilCreationMenu.characterSelection.clothe.index
+            profilCreationMenu.characterSelection.clothe.index,
+            0,0,0
             );
             UIM.SetActiveMenu(MenuType.GAME_PARAM);
         });
@@ -110,21 +123,20 @@ public class CharacterSelection : MonoBehaviour
 
         profilCreationMenu.characterSelection.clothe.next.onClick.AddListener(delegate { SelectAssets(profilCreationMenu.characterSelection.clothe); });
         profilCreationMenu.characterSelection.clothe.before.onClick.AddListener(delegate { SelectAssets(profilCreationMenu.characterSelection.clothe, false); });
-        /*
+
         // Hobby Selection
         profilCreationMenu.hobbysSelection.firstHobbys.onClick.AddListener(delegate { 
             UIM.SetActiveMenu(MenuType.STICKER_SCROLL);
-            selectedImage = GetComponent<Image>();
+            selected = selectedImage1;
         });
         profilCreationMenu.hobbysSelection.secondHobbys.onClick.AddListener(delegate { 
             UIM.SetActiveMenu(MenuType.STICKER_SCROLL);
-            selectedImage = GetComponent<Image>();
+            selected = selectedImage2;
         });
         profilCreationMenu.hobbysSelection.redFlag.onClick.AddListener(delegate { 
             UIM.SetActiveMenu(MenuType.STICKER_SCROLL);
-            selectedImage = GetComponent<Image>();
+            selected = selectedImage3;
         });
-        */
     }
 
     void SelectAssets(ProfilCreationMenu.CharacterParts.Part part, bool isNext = true)
