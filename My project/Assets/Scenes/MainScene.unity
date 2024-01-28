@@ -2222,6 +2222,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1113718064}
   m_SourcePrefab: {fileID: 100100000, guid: bed126deaa3ef41ce9c6bb016de9f77e, type: 3}
+--- !u!114 &1098561983 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6426870885557350048, guid: 409ba9ab0fc324e33ad904ba84ceafb2, type: 3}
+  m_PrefabInstance: {fileID: 1108923122}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1107010075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2412,6 +2423,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 711216040}
     m_Modifications:
+    - target: {fileID: 3785336909273887816, guid: 409ba9ab0fc324e33ad904ba84ceafb2, type: 3}
+      propertyPath: hobby1
+      value: 
+      objectReference: {fileID: 2105257755}
+    - target: {fileID: 3785336909273887816, guid: 409ba9ab0fc324e33ad904ba84ceafb2, type: 3}
+      propertyPath: hobby2
+      value: 
+      objectReference: {fileID: 1188714034}
+    - target: {fileID: 3785336909273887816, guid: 409ba9ab0fc324e33ad904ba84ceafb2, type: 3}
+      propertyPath: hobby3
+      value: 
+      objectReference: {fileID: 1098561983}
+    - target: {fileID: 3785336909273887816, guid: 409ba9ab0fc324e33ad904ba84ceafb2, type: 3}
+      propertyPath: hobbysAssets
+      value: 
+      objectReference: {fileID: 11400000, guid: 31ae8bd9795b1e64ca446a30e8661272, type: 2}
     - target: {fileID: 4705180069872345299, guid: 409ba9ab0fc324e33ad904ba84ceafb2, type: 3}
       propertyPath: m_Name
       value: ProfileMenu Variant
@@ -2537,6 +2564,17 @@ MonoBehaviour:
   profile: {fileID: 410990209}
   swip: {fileID: 384628471}
   field: {fileID: 1662591095}
+--- !u!114 &1188714034 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8573558009252826433, guid: 409ba9ab0fc324e33ad904ba84ceafb2, type: 3}
+  m_PrefabInstance: {fileID: 1108923122}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1243775651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4220,6 +4258,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2100245308}
   m_CullTransparentMesh: 1
+--- !u!114 &2105257755 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2026877082707470266, guid: 409ba9ab0fc324e33ad904ba84ceafb2, type: 3}
+  m_PrefabInstance: {fileID: 1108923122}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2130744644 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6899061180390529033, guid: bed126deaa3ef41ce9c6bb016de9f77e, type: 3}
@@ -4477,6 +4526,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 711216040}
     m_Modifications:
+    - target: {fileID: 3571828869973374390, guid: ea3e7a655657cff41a2b3be80794f588, type: 3}
+      propertyPath: def
+      value: 
+      objectReference: {fileID: 21300000, guid: db4d662cd645746d48362cdd5a736f6a, type: 3}
     - target: {fileID: 3571828869973374390, guid: ea3e7a655657cff41a2b3be80794f588, type: 3}
       propertyPath: selectedImage1
       value: 

@@ -8,10 +8,13 @@ public class ScrollStickers : MonoBehaviour
     public CharacterSelection characterSelection;
     UIManager UIM;
 
+    bool isFirst = false;
+
     void Start()
     {
         UIM = UIManager.instance;
-
+        isFirst = true;
+        UIM.ChangeContexteText("Choisie un centre d'intérêt");
         for (int i = 0; i < assets.sprites.Length; i++)
         {
             GameObject instance = Instantiate(content, holder);
@@ -22,6 +25,14 @@ public class ScrollStickers : MonoBehaviour
                 characterSelection.stickerInt = info.index;
                 UIM.SetActiveMenu(MenuType.PROFIL_CREATION);            
             });
+        }
+    }
+
+    private void OnEnable()
+    {
+        if (isFirst)
+        {
+            UIM.ChangeContexteText("Choisie un centre d'intérêt");
         }
     }
 }

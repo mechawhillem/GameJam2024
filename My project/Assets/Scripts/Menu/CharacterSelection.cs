@@ -11,6 +11,12 @@ public class CharacterSelection : MonoBehaviour
     public Image selectedImage1;
     public Image selectedImage2;
     public Image selectedImage3;
+    public Sprite def;
+    int tempo = -1;
+    int sprite1;
+    int sprite2;
+    int sprite3;
+
 
     Image selected;
 
@@ -72,9 +78,25 @@ public class CharacterSelection : MonoBehaviour
         {
             selected.sprite = profilCreationMenu.hobbysSelection.hobbysAssets.sprites[stickerInt];
         }
+
+        if (tempo != -1)
+        {
+            if (tempo == 0)
+            {
+                sprite1 = stickerInt;
+            }
+            if (tempo == 1)
+            {
+                sprite2 = stickerInt;
+            }
+            if (tempo == 2)
+            {
+                sprite3 = stickerInt;
+            }
+        }
     }
 
-    public void ResetUI() 
+    public void ResetUI()
     {
         inputFieldname.text = "";
         profilCreationMenu.characterSelection.hair.index = 0;
@@ -87,6 +109,9 @@ public class CharacterSelection : MonoBehaviour
         profilCreationMenu.characterSelection.mouth.image.sprite = profilCreationMenu.characterSelection.mouth.assets.sprites[0];
         profilCreationMenu.characterSelection.clothe.index = 0;
         profilCreationMenu.characterSelection.clothe.image.sprite = profilCreationMenu.characterSelection.clothe.assets.sprites[0];
+        selectedImage1.sprite = def;
+        selectedImage2.sprite = def;
+        selectedImage3.sprite = def;
     }
 
     /// <summary>
@@ -103,7 +128,9 @@ public class CharacterSelection : MonoBehaviour
             profilCreationMenu.characterSelection.nose.index,
             profilCreationMenu.characterSelection.mouth.index,
             profilCreationMenu.characterSelection.clothe.index,
-            0,0,0
+            sprite1,
+            sprite2,
+            sprite3
             );
             UIM.SetActiveMenu(MenuType.GAME_PARAM);
         });
@@ -125,17 +152,23 @@ public class CharacterSelection : MonoBehaviour
         profilCreationMenu.characterSelection.clothe.before.onClick.AddListener(delegate { SelectAssets(profilCreationMenu.characterSelection.clothe, false); });
 
         // Hobby Selection
-        profilCreationMenu.hobbysSelection.firstHobbys.onClick.AddListener(delegate { 
+        profilCreationMenu.hobbysSelection.firstHobbys.onClick.AddListener(delegate
+        {
             UIM.SetActiveMenu(MenuType.STICKER_SCROLL);
             selected = selectedImage1;
+            tempo = 0;
         });
-        profilCreationMenu.hobbysSelection.secondHobbys.onClick.AddListener(delegate { 
+        profilCreationMenu.hobbysSelection.secondHobbys.onClick.AddListener(delegate
+        {
             UIM.SetActiveMenu(MenuType.STICKER_SCROLL);
             selected = selectedImage2;
+            tempo = 1;
         });
-        profilCreationMenu.hobbysSelection.redFlag.onClick.AddListener(delegate { 
+        profilCreationMenu.hobbysSelection.redFlag.onClick.AddListener(delegate
+        {
             UIM.SetActiveMenu(MenuType.STICKER_SCROLL);
             selected = selectedImage3;
+            tempo = 2;
         });
     }
 

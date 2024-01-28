@@ -10,6 +10,11 @@ public class ProfilMenu : MonoBehaviour
     public Image nose;
     public Image mouth;
     public Image clothe;
+    public Image hobby1;
+    public Image hobby2;
+    public Image hobby3;
+
+    public HobbysAssets hobbysAssets;
 
     public CharacterAssets hairAssets;
     public CharacterAssets eyesAssets;
@@ -40,5 +45,8 @@ public class ProfilMenu : MonoBehaviour
         nose.sprite = noseAssets.sprites[GM.players[GM.matchIndex].noseIndex];
         mouth.sprite = mouthAssets.sprites[GM.players[GM.matchIndex].mouthIndex];
         clothe.sprite = clotheAssets.sprites[GM.players[GM.matchIndex].clotheIndex];
+        hobby1.sprite = hobbysAssets.sprites[GM.players[GM.matchIndex].firstHobbysIndex];
+        hobby2.sprite = hobbysAssets.sprites[GM.players[GM.matchIndex].secondHobbysIndex];
+        hobby3.sprite = hobbysAssets.sprites[GM.players[GM.matchIndex].redFlagIndex];
     }
 }
