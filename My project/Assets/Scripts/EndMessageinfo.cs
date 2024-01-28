@@ -6,6 +6,7 @@ public class EndMessageinfo : MonoBehaviour
 {
     public TextMeshProUGUI display;
     public Toggle toggle;
+    public int index;
 
     GameManager GM;
 
@@ -24,6 +25,7 @@ public class EndMessageinfo : MonoBehaviour
         if (toggle.isOn)
         {
             GM.playersRepondSelect = display.text;
+            GM.idk = index;
         }
     }
 }

@@ -31,6 +31,7 @@ public class MessageMatch : MonoBehaviour
             GameObject instance = Instantiate(prefabsText, holder);
             instance.GetComponent<EndMessageinfo>().display.text = GM.playersRespondOne[i];
             instance.GetComponent<EndMessageinfo>().toggle.group = toogle;
+            instance.GetComponent<EndMessageinfo>().index = i;
         }
     }
 }

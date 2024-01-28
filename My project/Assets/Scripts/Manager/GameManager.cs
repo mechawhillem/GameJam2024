@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
 
     [HideInInspector] public string matchPhraseOne;
     [HideInInspector] public string playersRepondSelect;
+    [HideInInspector] public int idk;
 
     [HideInInspector] public List<string> playersRespondOne = new List<string>();
 
