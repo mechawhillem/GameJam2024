@@ -7,6 +7,7 @@ public class MessagePretendant : MonoBehaviour
     public TextMeshProUGUI matchMessage;
     public TextMeshProUGUI pretendantMessage;
     public Button sendMessage;
+    public Button profile;
     public SwipeMatch swip;
     public TMP_InputField field;
 
@@ -25,11 +26,8 @@ public class MessagePretendant : MonoBehaviour
             GM.playersRespondOne.Add(pretendantMessage.text);
             IsEnd();
         });
-    }
 
-    private void OnEnable()
-    {
-        field.text = "";
+        profile.onClick.AddListener(delegate { UIM.SetActiveMenu(MenuType.PROFIL); });
     }
 
     void IsEnd()
@@ -38,6 +36,7 @@ public class MessagePretendant : MonoBehaviour
         {
             swip.isEnd = true;
         }
+        field.text = "";
         UIM.SetActiveMenu(MenuType.THE_SWIPER);
     }
 }

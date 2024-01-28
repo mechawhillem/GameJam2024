@@ -1,4 +1,3 @@
-using UnityEditor.Localization.Platform.Android;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -74,6 +73,7 @@ public class SwipeMatch : MonoBehaviour
         miniature.clothe.sprite = miniature.clotheAssets.sprites[GM.players[player].clotheIndex];
         UIM.ChangeContexteText($"{GM.players[player].playerName} est le match");
         GM.matchName = GM.players[player].playerName;
+        GM.matchIndex = player;
         GM.players[player].isMatch = true;
     }
 
