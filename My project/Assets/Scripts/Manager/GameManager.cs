@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     [HideInInspector] public string matchPhraseOne;
 
-    [HideInInspector] public List<string> playersRespondOne = new List<string>();
+     public List<string> playersRespondOne = new List<string>();
 
     public static GameManager instance;
 

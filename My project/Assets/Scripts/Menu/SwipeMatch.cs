@@ -7,12 +7,14 @@ public class SwipeMatch : MonoBehaviour
     public MiniatureInfo miniature;
     public Button next;
     public Button like;
+    public Button vote;
 
-    bool state = false;
+    [HideInInspector] public bool state = false;
+    [HideInInspector] public bool isEnd = false;
 
     int index = -1;
 
-    public GameObject ButtonLike, ButtonReady;
+    public GameObject ButtonLike, ButtonReady, buttonVote;
 
     GameManager GM;
     UIManager UIM;
@@ -22,17 +24,26 @@ public class SwipeMatch : MonoBehaviour
         GM = GameManager.instance;
         UIM = UIManager.instance;
 
-        if (state)
-        {
-            TakePlayers();
-        }
-        else
-        {
-            GetRandomPlayer();
-        }
+        GetRandomPlayer();
 
         next.onClick.AddListener(delegate { UIM.SetActiveMenu(MenuType.CATH_PHRASE); });
         like.onClick.AddListener(delegate { UIM.SetActiveMenu(MenuType.MESSAGE_PRETENDANT); });
+    }
+
+    private void OnEnable()
+    {
+        if (state && isEnd == false)
+        {
+            TakePlayers();
+        }
+
+        if (isEnd)
+        {
+            UIM.ChangeContexteText($"{GM.matchName} a toi de voter");
+            buttonVote.SetActive(true);
+            ButtonLike.SetActive(false);
+            ButtonReady.SetActive(false);
+        }
     }
 
     void TakePlayers() 
@@ -42,6 +53,7 @@ public class SwipeMatch : MonoBehaviour
         {
             GM.currentPlayer = GM.players[index].playerName;
             GM.currentIndexPlayer = index;
+            UIM.ChangeContexteText($"Au tour de {GM.players[index].playerName}");
         }
         else 
         {

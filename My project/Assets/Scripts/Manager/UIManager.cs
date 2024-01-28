@@ -62,7 +62,7 @@ public class UIManager : MonoBehaviour
         messageMenuPretendant.SetActive(false);
         messageMenuMatch.SetActive(false);
         messageMenuEnd.SetActive(false);
-        profile.SetActive(true);
+        profile.SetActive(false);
 
         switch (menuType)
         {
@@ -84,16 +84,15 @@ public class UIManager : MonoBehaviour
                 break;
 
             case MenuType.THE_MATCH:
-                contextualText.SetActive(true);
-                theMacthPlayerMenu.SetActive(true);
                 theMacthPlayerMenu.GetComponent<SwipeMatch>().switchMode(false);
+                contextualText.SetActive(true);
+                theMacthPlayerMenu.SetActive(true);      
                 break;
 
             case MenuType.THE_SWIPER:
-                contextualText.SetActive(true);
-                //contextualText.GetComponent<ContextualManage>().ChangeContexte($"Au tour de {swiper} !");
-                theMacthPlayerMenu.SetActive(true);
                 theMacthPlayerMenu.GetComponent<SwipeMatch>().switchMode(true);
+                contextualText.SetActive(true);
+                theMacthPlayerMenu.SetActive(true);              
                 break;
 
             case MenuType.CATH_PHRASE:

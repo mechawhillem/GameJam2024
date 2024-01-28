@@ -7,6 +7,8 @@ public class MessagePretendant : MonoBehaviour
     public TextMeshProUGUI matchMessage;
     public TextMeshProUGUI pretendantMessage;
     public Button sendMessage;
+    public SwipeMatch swip;
+    public TMP_InputField field;
 
     GameManager GM;
     UIManager UIM;
@@ -16,9 +18,26 @@ public class MessagePretendant : MonoBehaviour
         GM = GameManager.instance;
         UIM = UIManager.instance;
 
-        sendMessage.onClick.AddListener(delegate { 
+        matchMessage.text = GM.matchPhraseOne;
+
+        sendMessage.onClick.AddListener(delegate
+        {
             GM.playersRespondOne.Add(pretendantMessage.text);
-            UIM.SetActiveMenu(MenuType.THE_SWIPER);
+            IsEnd();
         });
+    }
+
+    private void OnEnable()
+    {
+        field.text = "";
+    }
+
+    void IsEnd()
+    {
+        if (GM.currentIndexPlayer == GM.players.Count - 1)
+        {
+            swip.isEnd = true;
+        }
+        UIM.SetActiveMenu(MenuType.THE_SWIPER);
     }
 }
