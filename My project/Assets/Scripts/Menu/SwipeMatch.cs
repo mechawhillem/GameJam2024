@@ -27,6 +27,7 @@ public class SwipeMatch : MonoBehaviour
 
         next.onClick.AddListener(delegate { UIM.SetActiveMenu(MenuType.CATH_PHRASE); });
         like.onClick.AddListener(delegate { UIM.SetActiveMenu(MenuType.MESSAGE_PRETENDANT); });
+        vote.onClick.AddListener(delegate { UIM.SetActiveMenu(MenuType.MESSAGE_MATCH); });
     }
 
     private void OnEnable()

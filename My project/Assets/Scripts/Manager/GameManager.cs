@@ -4,7 +4,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public GameObject playerPrefabs;
-    public List<DataPlayer> players = new List<DataPlayer>();
+    [HideInInspector] public List<DataPlayer> players = new List<DataPlayer>();
     public GameParamMenu gameParamMenu;
 
     [HideInInspector] public string matchName;
@@ -13,8 +13,9 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public int currentIndexPlayer;
 
     [HideInInspector] public string matchPhraseOne;
+     public string playersRepondSelect;
 
-     public List<string> playersRespondOne = new List<string>();
+    [HideInInspector] public List<string> playersRespondOne = new List<string>();
 
     public static GameManager instance;
 
@@ -28,7 +29,7 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
-    public void CreatePlayer(string name, int hairIndex, int eyesIndex, int noseIndex, int mouthIndex, int clothIndex) 
+    public void CreatePlayer(string name, int hairIndex, int eyesIndex, int noseIndex, int mouthIndex, int clothIndex)
     {
         GameObject instance = Instantiate(playerPrefabs, transform);
         instance.gameObject.name = name;
@@ -36,11 +37,11 @@ public class GameManager : MonoBehaviour
         player.playerName = name;
         player.hairIndex = hairIndex;
         player.eyesIndex = eyesIndex;
-        player.noseIndex = noseIndex;   
+        player.noseIndex = noseIndex;
         player.mouthIndex = mouthIndex;
         player.clotheIndex = clothIndex;
         players.Add(player);
-        gameParamMenu.CreatePlayer(name,hairIndex,eyesIndex,noseIndex,mouthIndex,clothIndex);
+        gameParamMenu.CreatePlayer(name, hairIndex, eyesIndex, noseIndex, mouthIndex, clothIndex);
     }
 
 
