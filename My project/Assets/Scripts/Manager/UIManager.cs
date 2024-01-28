@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum MenuType
 {
@@ -132,5 +133,11 @@ public class UIManager : MonoBehaviour
     public void ChangeContexteText(string newtext) 
     {
         contextualText.GetComponent<ContextualManage>().ChangeContexte(newtext);
+    }
+
+    public void ResetScene() 
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
     }
 }

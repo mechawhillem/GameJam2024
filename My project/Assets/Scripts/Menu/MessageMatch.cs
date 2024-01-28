@@ -8,6 +8,7 @@ public class MessageMatch : MonoBehaviour
     public GameObject prefabsText;
     public ToggleGroup toogle;
     public Transform holder;
+    public Button next;
 
     GameManager GM;
     UIManager UIM;
@@ -17,9 +18,10 @@ public class MessageMatch : MonoBehaviour
         GM = GameManager.instance;
         UIM = UIManager.instance;
 
-        UIM.ChangeContexteText($"{GM.matchName}, a toi de choisir !");
+        UIM.ChangeContexteText($"{GM.matchName}, a toi de choisir ta phrase favorite!");
         matchText.text = GM.matchPhraseOne;
         DisplayText();
+        next.onClick.AddListener(delegate { UIM.SetActiveMenu(MenuType.MESSAGE_END); });
     }
 
     void DisplayText()

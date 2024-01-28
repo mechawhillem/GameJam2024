@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public int currentIndexPlayer;
 
     [HideInInspector] public string matchPhraseOne;
-     public string playersRepondSelect;
+    [HideInInspector] public string playersRepondSelect;
 
     [HideInInspector] public List<string> playersRespondOne = new List<string>();
 
