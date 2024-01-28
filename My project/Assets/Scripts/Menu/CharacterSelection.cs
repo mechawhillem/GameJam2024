@@ -2,11 +2,12 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static CharacterSelection;
 
 public class CharacterSelection : MonoBehaviour
 {
     public ProfilCreationMenu profilCreationMenu;
-
+    public TMP_InputField inputFieldname;
     //Image selectedImage = null;
 
     GameManager GM;
@@ -61,12 +62,29 @@ public class CharacterSelection : MonoBehaviour
         Bind();
     }
 
+    private void OnEnable()
+    {
+        inputFieldname.text = "";
+        profilCreationMenu.characterSelection.hair.index = 0;
+        profilCreationMenu.characterSelection.hair.image.sprite = profilCreationMenu.characterSelection.hair.assets.sprites[0];
+        profilCreationMenu.characterSelection.eyes.index = 0;
+        profilCreationMenu.characterSelection.eyes.image.sprite = profilCreationMenu.characterSelection.eyes.assets.sprites[0];
+        profilCreationMenu.characterSelection.nose.index = 0;
+        profilCreationMenu.characterSelection.nose.image.sprite = profilCreationMenu.characterSelection.nose.assets.sprites[0];
+        profilCreationMenu.characterSelection.mouth.index = 0;
+        profilCreationMenu.characterSelection.mouth.image.sprite = profilCreationMenu.characterSelection.mouth.assets.sprites[0];
+        profilCreationMenu.characterSelection.clothe.index = 0;
+        profilCreationMenu.characterSelection.clothe.image.sprite = profilCreationMenu.characterSelection.clothe.assets.sprites[0];
+    }
+
     /// <summary>
     /// Lie les events lié au menu de creation de personnage
     /// </summary>
     void Bind()
     {
-        profilCreationMenu.next.onClick.AddListener(delegate { GM.CreatePlayer(
+        profilCreationMenu.next.onClick.AddListener(delegate
+        {
+            GM.CreatePlayer(
             GetPlayerName(),
             profilCreationMenu.characterSelection.hair.index,
             profilCreationMenu.characterSelection.eyes.index,
@@ -117,7 +135,7 @@ public class CharacterSelection : MonoBehaviour
         part.image.sprite = part.assets.sprites[part.index];
     }
 
-    string GetPlayerName() 
+    string GetPlayerName()
     {
         return profilCreationMenu.playerName.text;
     }

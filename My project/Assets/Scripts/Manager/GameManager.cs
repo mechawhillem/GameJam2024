@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public GameParamMenu gameParamMenu;
 
     [HideInInspector] public string matchName;
+    [HideInInspector] public int matchIndex;
     [HideInInspector] public string currentPlayer;
     [HideInInspector] public int currentIndexPlayer;
 
