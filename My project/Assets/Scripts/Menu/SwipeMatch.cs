@@ -1,3 +1,4 @@
+using UnityEditor.Localization.Platform.Android;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,6 +7,10 @@ public class SwipeMatch : MonoBehaviour
     public MiniatureInfo miniature;
     public Button next;
     public Button like;
+
+    bool state = false;
+
+    int index = -1;
 
     public GameObject ButtonLike, ButtonReady;
 
@@ -17,9 +22,32 @@ public class SwipeMatch : MonoBehaviour
         GM = GameManager.instance;
         UIM = UIManager.instance;
 
-        GetRandomPlayer();
+        if (state)
+        {
+            TakePlayers();
+        }
+        else
+        {
+            GetRandomPlayer();
+        }
+
         next.onClick.AddListener(delegate { UIM.SetActiveMenu(MenuType.CATH_PHRASE); });
         like.onClick.AddListener(delegate { UIM.SetActiveMenu(MenuType.MESSAGE_PRETENDANT); });
+    }
+
+    void TakePlayers() 
+    {
+        index++;
+        if (!GM.players[index].isMatch)
+        {
+            GM.currentPlayer = GM.players[index].playerName;
+            GM.currentIndexPlayer = index;
+        }
+        else 
+        {
+            TakePlayers();
+        }
+        
     }
 
     void GetRandomPlayer()
@@ -34,11 +62,13 @@ public class SwipeMatch : MonoBehaviour
         miniature.clothe.sprite = miniature.clotheAssets.sprites[GM.players[player].clotheIndex];
         UIM.ChangeContexteText($"{GM.players[player].playerName} est le match");
         GM.matchName = GM.players[player].playerName;
+        GM.players[player].isMatch = true;
     }
 
     public void switchMode(bool state)
     {
-        if (state)
+        this.state = state;
+        if (this.state)
         {
             ButtonLike.SetActive(true);
             ButtonReady.SetActive(false);

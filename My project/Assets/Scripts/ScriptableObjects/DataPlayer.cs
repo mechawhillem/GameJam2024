@@ -16,5 +16,5 @@ public class DataPlayer : MonoBehaviour
 
     public int score;
     public int nmbRedFlag;
-    public bool haveBeMatch = false;
+    public bool isMatch = false;
 }

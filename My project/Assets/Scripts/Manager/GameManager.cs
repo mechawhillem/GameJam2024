@@ -9,10 +9,11 @@ public class GameManager : MonoBehaviour
 
     [HideInInspector] public string matchName;
     [HideInInspector] public string currentPlayer;
+    [HideInInspector] public int currentIndexPlayer;
 
     [HideInInspector] public string matchPhraseOne;
 
-    [HideInInspector] public string[] playersRespondOne;
+    [HideInInspector] public List<string> playersRespondOne = new List<string>();
 
     public static GameManager instance;
 
